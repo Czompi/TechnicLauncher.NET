@@ -5,7 +5,7 @@ TechnicLauncher.NET is a C# .NET 5.0 implementation of Technic Launcher and it i
 ### Codebehind
 - [x] Multilanguage support
 - - [x] Converting property files to xml [(separate project)](https://github.com/Czompi/Properties2XML)
-- - [x] Added language support
+- - [x] Added language handler
 - - [x] Added a converter to make inline translations inside XAML code.
 - [ ] Support for [PlatformAPI](https://github.com/TechnicPack/LauncherV3/tree/master/src/main/java/net/technicpack/platform)
 - - [x] HTTP
