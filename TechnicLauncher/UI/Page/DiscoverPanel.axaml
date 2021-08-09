@@ -1,0 +1,39 @@
+<Panel xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	    Width="1194" Height="599"
+		xmlns:lang="using:TechnicLauncher.Language"
+        x:Class="TechnicLauncher.UI.Page.DiscoverPanel">
+	<Panel.Styles>
+		<StyleInclude Source="/UI/Style/Colors.axaml" />
+		<StyleInclude Source="/UI/Style/Discover.axaml" />
+	</Panel.Styles>
+	<Panel.Resources>
+		<lang:Translate x:Key="translate"/>
+	</Panel.Resources>
+	
+	<Grid ColumnDefinitions="890,271*" Margin="8">
+		<Grid Grid.Row="0" Grid.Column="0" RowDefinitions="390,172*">
+			<Image Grid.Row="0" Grid.Column="0" Source="/Resources/Discover/scraps.png"/>
+			<Grid Grid.Row="1" Grid.Column="0" ColumnDefinitions="440,10,440" Margin="0,8,0,0">
+				<Image Grid.Row="0" Grid.Column="0" Source="/Resources/Discover/discord.png" Stretch="UniformToFill"/>
+				<Image Grid.Row="0" Grid.Column="2" Source="/Resources/Discover/merch.png" Stretch="UniformToFill"/>
+			</Grid>
+		</Grid>
+		<Grid Grid.Row="0" Grid.Column="1" RowDefinitions="Auto,*" Margin="8,0,0,0">
+			<Label Grid.Row="0" Grid.Column="0" Content="Trending Modpacks" FontSize="24"/>
+			<ListBox Grid.Row="1" Grid.Column="0" x:Name="Featured" Classes="featured" Items="{Binding FeaturedModpacks}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+				<ListBox.ItemTemplate>
+					<DataTemplate>
+						<Button Height="169" Tag="{Binding}" Click="OnTrendingItemClick" Background="Transparent" BorderThickness="0">
+							<Grid Height="169">
+								<Image Source="{Binding Image}"/>
+								<Label Content="{Binding Name}" Classes="listboxitem" Height="156" Width="260" VerticalAlignment="Center" Margin="16" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+							</Grid>
+						</Button>
+					</DataTemplate>
+				</ListBox.ItemTemplate>
+				
+			</ListBox>
+		</Grid>
+	</Grid>
+</Panel>

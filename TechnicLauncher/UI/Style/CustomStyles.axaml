@@ -1,0 +1,92 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+		<Border Padding="20" Background="#106ca3">
+			<StackPanel Orientation="Horizontal">
+				<!-- Add Controls for Previewer Here -->
+				<Button Classes="title" Content="BROWSE" Margin="4"/>
+				<Button Classes="title active" Content="BROWSE" Margin="4"/>
+				<Button Classes="navbtn launcher-options" Content="d" Margin="4"/>
+				<Button Classes="navbtn launcher-options active" Content="f" Margin="4"/>
+				<Label  Classes="font-raleway" Content="Logged in as{0} " VerticalContentAlignment="Center"/>
+			</StackPanel>
+		</Border>
+    </Design.PreviewWith>
+    <!-- Add Styles Here -->
+	<Style Selector="Button.title">
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="Padding" Value="20,18,20,18"/>
+		<Setter Property="FontSize" Value="26"/>
+		<Setter Property="FontWeight" Value="100"/>
+		<Setter Property="FontFamily" Value="/Resources/Font/Raleway+FireflySung.ttf#Raleway"/>
+		<Setter Property="BorderThickness" Value="0"/>
+	</Style>
+
+	<Style Selector="Button.title:pointerover">
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="BorderThickness" Value="0"/>
+	</Style>
+	<Style Selector="Button.title:disabled">
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="BorderThickness" Value="0"/>
+	</Style>
+	<Style Selector="Button.title:focus">
+		<Setter Property="Background" Value="{DynamicResource COLOR_BLUE_DARKER}"/>
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="BorderThickness" Value="0"/>
+	</Style>
+	<Style Selector="Button.title:pressed">
+		<Setter Property="Background" Value="{DynamicResource COLOR_BLUE_DARKER}"/>
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="BorderThickness" Value="0"/>
+	</Style>
+	<Style Selector="Button.title.active">
+		<Setter Property="Background" Value="{DynamicResource COLOR_BLUE_DARKER}"/>
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="BorderThickness" Value="0"/>
+	</Style>
+
+	<Style Selector="Button.navbtn">
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="BorderThickness" Value="0"/>
+
+		<Setter Property="Width" Value="30"/>
+		<Setter Property="Height" Value="24"/>
+	</Style>
+	<Style Selector="Button.navbtn:pointerover">
+		<Setter Property="Background" Value="{DynamicResource COLOR_BLUE_DARKER}"/>
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="BorderThickness" Value="0"/>
+	</Style>
+	<Style Selector="Button.navbtn:focus">
+		<Setter Property="Background" Value="{DynamicResource COLOR_BLUE_DARKER}"/>
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="BorderThickness" Value="0"/>
+	</Style>
+	<Style Selector="Button.navbtn.close:pointerover">
+		<Setter Property="Background" Value="#E50000"/>
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="BorderThickness" Value="0"/>
+	</Style>
+	<Style Selector="Button.navbtn.close:focus">
+		<Setter Property="Background" Value="#E50000"/>
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="BorderThickness" Value="0"/>
+	</Style>
+
+
+	<Style Selector="Label.footer">
+		<Setter Property="FontFamily" Value="/Resources/Font/Raleway+FireflySung.ttf#Raleway"/>
+		<Setter Property="FontWeight" Value="Thin"/>
+		<Setter Property="FontSize" Value="15"/>
+		<Setter Property="Foreground" Value="White"/>
+	</Style>
+	<Style Selector="Label.font-opensans">
+		<Setter Property="FontFamily" Value="/Resources/Font/OpenSans+Cyberbit.ttf#Open Sans"/>
+		<Setter Property="FontWeight" Value="Thin"/>
+	</Style>
+</Styles>

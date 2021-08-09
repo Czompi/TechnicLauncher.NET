@@ -1,0 +1,42 @@
+﻿<Style xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <!-- Add Controls for Previewer Here -->
+        </Border>
+    </Design.PreviewWith>
+
+    <!-- Add Styles Here -->
+	<Style.Resources>
+		<Color x:Key="COLOR_RED">#E50000</Color>
+		<Color x:Key="COLOR_GREEN">#5AB860</Color>
+		<Color x:Key="COLOR_BLUE">#106CA3</Color>
+		<Color x:Key="COLOR_BLUE_OPACITY">#106CA3AA</Color>
+		<Color x:Key="COLOR_BLUE_DARKER">#0C5E91</Color>
+		<Color x:Key="COLOR_WHITE_TEXT">#D0D0D0</Color>
+		<Color x:Key="COLOR_DIM_TEXT">#A0A0A0</Color>
+		<Color x:Key="COLOR_HEADER_TEXT">#FFFFFF</Color>
+		<Color x:Key="COLOR_CHARCOAL">#1F1F1F</Color>
+		<Color x:Key="COLOR_BANNER">#000000A0</Color>
+		<Color x:Key="COLOR_PANEL">#242627</Color>
+		<Color x:Key="COLOR_SCROLL_TRACK">#121212</Color>
+		<Color x:Key="COLOR_SCROLL_THUMB">#353535</Color>
+		<Color x:Key="COLOR_SELECTOR_BACK">#161A1D</Color>
+		<Color x:Key="COLOR_SELECTOR_OPTION">#262E35</Color>
+		<Color x:Key="COLOR_FEED_BACK">#161A1DC8</Color>
+		<Color x:Key="COLOR_CENTRAL_BACK">#191E22A0</Color>
+		<Color x:Key="COLOR_CENTRAL_BACK_OPAQUE">#191E22</Color>
+		<Color x:Key="COLOR_FEEDITEM_BACK">#252C31</Color>
+		<Color x:Key="COLOR_LIKES_BACK">#144161</Color>
+		<Color x:Key="COLOR_BUTTON_BLUE">#2B80C3</Color>
+		<Color x:Key="COLOR_FORMELEMENT_INTERNAL">#1E272E</Color>
+		<Color x:Key="COLOR_GREY_TEXT">#56626E</Color>
+		<Color x:Key="COLOR_FOOTER">#1B2024</Color>
+		<Color x:Key="COLOR_SERVER">#5BC0DE</Color>
+
+		<Color x:Key="COLOR_REQUIREMENT_SUCCEED">#5EB567</Color>
+		<Color x:Key="COLOR_REQUIREMENT_FAIL">#850C0C</Color>
+		<Color x:Key="COLOR_REQUIREMENT_SEPARATOR">#252C31</Color>
+		<Color x:Key="COLOR_REQUIREMENT_WARNING">#E67700</Color>
+	</Style.Resources>
+</Style>

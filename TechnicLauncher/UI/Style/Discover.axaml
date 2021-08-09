@@ -1,0 +1,60 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <!-- Add Controls for Previewer Here -->
+			<ListBox Grid.Row="1" Grid.Column="0" Classes="featured">
+
+			</ListBox>
+        </Border>
+    </Design.PreviewWith>
+
+    <!-- Add Styles Here -->
+	<Style Selector="Label">
+		<!--<Setter Property="FontFamily" Value="/Resources/Font/Raleway+FireflySung.ttf#Raleway"/>-->
+	</Style>
+	<Style Selector="ListBox.featured">
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="FontWeight" Value="100"/>
+		<Setter Property="FontFamily" Value="/Resources/Font/Raleway+FireflySung.ttf#Raleway"/>
+		<Setter Property="BorderThickness" Value="0"/>
+	</Style>
+	<Style Selector="ListBox.featured > ListBoxItem">
+		<Setter Property="Margin" Value="0,0,0,13"/>
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="Background" Value="{DynamicResource COLOR_FOOTER}"/>
+		<Setter Property="FontWeight" Value="100"/>
+		<Setter Property="FontFamily" Value="/Resources/Font/Raleway+FireflySung.ttf#Raleway"/>
+		<Setter Property="BorderThickness" Value="0"/>
+	</Style>
+	<Style Selector="ListBox.featured > ListBoxItem:pointerover /template/ ContentPresenter">
+		<Setter Property="Background" Value="{DynamicResource COLOR_FOOTER}"/>
+	</Style>
+	<Style Selector="ListBox.featured > ListBoxItem:focus /template/ ContentPresenter">
+		<Setter Property="Background" Value="{DynamicResource COLOR_FOOTER}"/>
+	</Style>
+	<Style Selector="ListBox.featured > ListBoxItem:pressed /template/ ContentPresenter">
+		<Setter Property="Background" Value="{DynamicResource COLOR_FOOTER}"/>
+	</Style>
+
+	<Style Selector="Label.listboxitem">
+		<Setter Property="Margin" Value="0,0,0,13"/>
+		<Setter Property="IsVisible" Value="False"/>
+	</Style>
+	<Style Selector="Label.listboxitem:mouseover">
+		<Setter Property="IsVisible" Value="True"/>
+		<Setter Property="Background" Value="#106CA3"/>
+		<Setter Property="Opacity" Value=".8"/>
+	</Style>
+	<Style Selector="Label.listboxitem:focus">
+		<Setter Property="IsVisible" Value="True"/>
+		<Setter Property="Background" Value="#106CA3"/>
+		<Setter Property="Opacity" Value=".8"/>
+	</Style>
+	<Style Selector="Label.listboxitem:pressed">
+		<Setter Property="IsVisible" Value="True"/>
+		<Setter Property="Background" Value="#106CA3"/>
+		<Setter Property="Opacity" Value=".8"/>
+	</Style>
+</Styles>

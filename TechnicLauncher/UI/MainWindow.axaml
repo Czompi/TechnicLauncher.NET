@@ -1,0 +1,66 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:lang="using:TechnicLauncher.Language"
+		xmlns:pages="using:TechnicLauncher.UI.Page"
+        mc:Ignorable="d"
+		Width="1194" Height="718"
+        x:Class="TechnicLauncher.UI.MainWindow"
+		Background="#161a1d"
+        Title="Technic Launcher in C#"
+		Icon="/Resources/icon.ico"
+		ExtendClientAreaTitleBarHeightHint="72"
+		HasSystemDecorations="True"
+		ExtendClientAreaToDecorationsHint="True">
+	<Window.Styles>
+		<StyleInclude Source="/UI/Style/Colors.axaml" />
+		<StyleInclude Source="/UI/Style/CustomStyles.axaml" />
+	</Window.Styles>
+	<Window.Resources>
+		<lang:Translate x:Key="translate" />
+	</Window.Resources>
+	<Grid RowDefinitions="72,599*,47">
+		<!-- #region Header -->
+		<Border Background="#106ca3" Grid.Row="0" CornerRadius="0,8" PointerPressed="OnTitlebarPointerMoved">
+			<Grid>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+					<Image Source="/Resources/platform_icon_title.png" Width="48" Height="48" Margin="14,12,9,14"/>
+					<Button Classes="title active" Content="{Binding $self, Converter={StaticResource translate}, ConverterParameter=launcher.title.discover}" Click="OnDiscoverMenuItemClick"/>
+					<Button Classes="title" Content="{Binding $self, Converter={StaticResource translate}, ConverterParameter=launcher.title.modpacks}" Click="OnModpacksMenuItemClick"/>
+					<Button Classes="title" Content="{Binding $self, Converter={StaticResource translate}, ConverterParameter=launcher.title.news}" Click="OnNewsMenuItemClick"/>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="8">
+					<Button Classes="navbtn launcher-options" Height="30" Width="144" HorizontalContentAlignment="Right" Click="OnOptionsClick">
+						<StackPanel Orientation="Horizontal">
+							<Label Content="{Binding $self, Converter={StaticResource translate}, ConverterParameter=launcher.title.options}" FontSize="14" FontWeight="100" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+							<Image Source="avares://TechnicLauncher/Resources/options_cog.png"/>
+						</StackPanel>
+					</Button>
+				</StackPanel>
+			</Grid>
+		</Border>
+		<!-- #endregion -->
+
+		<!-- #region Content -->
+		<Panel x:Name="ContentPanel" Background="Transparent" Grid.Row="1"/>
+		<!-- #endregion -->
+		
+		<!-- #region Footer -->
+		<Border Background="#1b2024" Grid.Row="2" CornerRadius="8,0">
+			<Grid>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+					<Image x:Name="UserIcon" Source="/Resources/News/authorHelm.png" Width="30" Height="30" Margin="16,0,0,0"/>
+					<Label x:Name="UserName" Content="{Binding $self, Converter={StaticResource translate}, ConverterParameter=launcher.user.logged}" Padding="0" Classes="footer" Margin="11,0,0,0" VerticalContentAlignment="Center"/>
+					<Label Content=" | " Classes="footer" Margin="0" Padding="0" VerticalContentAlignment="Center"/>
+					<Label Content="{Binding $self, Converter={StaticResource translate}, ConverterParameter=launcher.user.logout}" Padding="0" Classes="footer" Cursor="Hand" VerticalContentAlignment="Center"/>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+					<!--<Image x:Name="Ad" Source="/Resources/akliz-logo.png" Height="30" Margin="0,0,11,0"/>-->
+					<Label Content="This is an unofficial reimplementation of Technic Launcher in C#" Classes="footer" Margin="0,0,11,0" Padding="0" VerticalContentAlignment="Center"/>
+				</StackPanel>
+			</Grid>
+		</Border>
+		<!-- #endregion -->
+	</Grid>
+</Window>
